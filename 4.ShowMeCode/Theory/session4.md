@@ -28,10 +28,16 @@ What is Reconciliation in React?
     Reconciliation is the process through which React updates the Browser DOM and makes React work faster. React use a diffing algorithm so that component updates are predictable and faster. React would first calculate the difference between the real DOM and the copy of DOM (Virtual DOM) when there's an update of components. React stores a copy of Browser DOM which is called Virtual DOM. When we make changes or add data, React creates a new Virtual DOM and compares it with the previous one. Comparison is done by Diffing Algorithm. React compares the Virtual DOM with Real DOM. It finds out the changed nodes and updates only the changed nodes in Real DOM leaving the rest nodes as it is. This process is called Reconciliation.
 
 What is React Fiber?
-    React Fiber is a reimplementation of the React core algorithm, designed to improve the performance and flexibility of the React library. It was introduced in React version 16.React Fiber represents a significant improvement to the React library, providing faster and more flexible rendering, improved error handling, and better support for animations.
+    React Fiber is a re-implementation of the React core algorithm, designed to improve the performance and flexibility of the React library. It was introduced in React version 16.React Fiber represents a significant improvement to the React library, providing faster and more flexible rendering, improved error handling, and better support for animations.
 
 
 Why we need keys in React? When do we need keys in React?
+    keys act as unique identifier for all react element that helps react differentiate between what changed and what needed to be updated.
+
+
 Can we use index as keys in React?
+    we can use index as key but this is not a good practice. Using index as key can cause performance issues. However using keys are must and index as can use as last resort.
+
+
 What is props in React? Ways to
 What is a Config Driven UI ?
