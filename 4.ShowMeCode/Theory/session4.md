@@ -32,12 +32,19 @@ What is React Fiber?
 
 
 Why we need keys in React? When do we need keys in React?
-    keys act as unique identifier for all react element that helps react differentiate between what changed and what needed to be updated.
+    keys act as unique identifier for all react element that helps react differentiate between what changed and what needed to be updated, helping diffing algorithm become efficient.
+    Suppose if we have a list element. And if we add a new list element at the end of the list. The react algo will work properly. However if add a new list element at the top of the list, The react Diffing algorithms will unmount/delete the entire list and will make a new one. That will cause a lot of inefficiency. With Keys the react can understand what is new and what is already present in the actual DOM.
 
 
 Can we use index as keys in React?
-    we can use index as key but this is not a good practice. Using index as key can cause performance issues. However using keys are must and index as can use as last resort.
+    we can use index as key but this is not a good practice. Using index as key can cause performance issues(keys can change if the list is changed). However using keys are must and index as can use as last resort. e.g. Index are fine if the list is static, and cannot be re-ordered.
 
 
-What is props in React? Ways to
+What is props in React? Ways to pass them?
+    In React, "props" is short for properties. Props are a way to pass data and parameters from one component to another in a unidirectional flow. A component can receive props as input and use the values of those props to render its output.
+    To pass props to a component in React, we simply include them as attributes on the JSX tag when rendering the component. For example, if you have a Welcome component that expects a name prop, you could render it like this:
+             <Welcome name="Alice" />
+
+
 What is a Config Driven UI ?
+    Config-driven UI refers to a user interface design approach where the behavior and appearance of the UI components are defined by a configuration file or data. In this approach, the UI is designed to be highly customizable and flexible, allowing developers to easily modify the UI based on changing requirements or user preferences without having to modify the code.
